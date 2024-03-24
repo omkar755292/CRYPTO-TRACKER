@@ -35,16 +35,19 @@ const Authentication = () => {
     return (
         <div className='d-flex justify-content-center m-4'>
             <div>
+
                 <Avtar />
                 <Routes >
                     <Route path='/' element={<Login />} />
                     <Route path='/login' element={<Login />} />
                     <Route path='/register' element={<Register />} />
                 </Routes>
+
                 <div className='d-flex flex-column justify-content-center'>
                     <GoogleButton onClick={handleGoogleLogin} className='mt-3' type='light' />
                     <button onClick={forgetPasswordHandler} class="btn btn-link">Forget Password</button>
                 </div>
+
             </div>
         </div>
     )
