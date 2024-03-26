@@ -26,36 +26,39 @@ const Register = () => {
     }
 
     return (
-        <div className='container mt-3'>
-            <form onSubmit={add}>
-                <div class="mb-3">
-                    <label class="form-label">Enter Your Full Name</label>
+        <div className='container  mt-3'>
+            <form onSubmit={add} >
+                <div class="mb-2">
+                    {/* <label class="form-label">Enter Full Name</label> */}
                     <input type="name"
                         class="form-control"
                         id="name"
+                        placeholder='Full Name'
                         value={fullName}
                         onChange={(e) => { setFullName(e.target.value) }} />
                 </div>
-                <div class="mb-3">
-                    <label class="form-label">Email address</label>
+                <div class="mb-2">
+                    {/* <label class="form-label">Email address</label> */}
                     <input type="email"
                         class="form-control"
                         id="email"
+                        placeholder='Email Address'
                         value={email}
                         onChange={(e) => { setEmail(e.target.value) }} />
                 </div>
-                <div class="mb-3">
-                    <label class="form-label">Password</label>
+                <div class="mb-2">
+                    {/* <label class="form-label">Password</label> */}
                     <input
                         type="password"
                         class="form-control"
                         id="password"
+                        placeholder='Password'
                         value={password}
                         onChange={(e) => { setPassword(e.target.value) }} />
                 </div>
-                <div className='container'>
-                    <button type="submit" class="btn btn-primary mx-1 w-50">Submit</button> &nbsp;
-                    <Link to="/login" className='w-50 mx-1'>Login</Link>
+                <div className='pt-1'>
+                    <button type="submit" class="btn btn-primary w-50">Submit</button>&nbsp;
+                    <Link to="/authentication/login" className='w-25 ms-5'>login</Link>&nbsp;
                 </div>
             </form>
         </div>

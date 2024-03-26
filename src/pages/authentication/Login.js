@@ -22,28 +22,30 @@ const Login = () => {
 
     }
     return (
-        <div className='container mt-3'>
+        <div className='container mt-3 justify-content-center'>
             <form onSubmit={add}>
-                <div class="mb-3">
-                    <label class="form-label">Email address</label>
+                <div class="mb-2">
+                    {/* <label class="form-label">Email address</label> */}
                     <input type="email"
                         class="form-control"
+                        placeholder='Email Address'
                         id="email"
                         value={email}
                         onChange={(e) => { setEmail(e.target.value) }} />
                 </div>
-                <div class="mb-3">
-                    <label class="form-label">Password</label>
+                <div class="mb-2">
+                    {/* <label class="form-label">Password</label> */}
                     <input
                         type="password"
+                        placeholder='Password'
                         class="form-control"
                         id="password"
                         value={password}
                         onChange={(e) => { setPassword(e.target.value) }} />
                 </div>
-                <div>
-                    <button type="submit" class="btn btn-primary mx-1 w-50">Submit</button>&nbsp;
-                    <Link to="/register" className='w-50 mx-1'>Register</Link>&nbsp;
+                <div className='pt-1'>
+                    <button type="submit" class="btn btn-primary w-50">Submit</button>&nbsp;
+                    <Link to="/authentication/register" className='w-25 ms-5'>Register</Link>&nbsp;
                 </div>
             </form>
         </div>

@@ -1,0 +1,59 @@
+/* rgba(252,185,0,1)
+rgba(255,105,0,1)
+rgb(108 117 125)
+rgb(52 58 64) */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.authentication {
+    height: 730px;
+    background-image: url('./asset/images/Cryptocurrency.webp');
+    background-color: #14161a;
+    background: no-repeat cover;
+    color: white;
+
+}
+
+.auth-form {
+    border: 3px solid white;
+    background-color: rgba(0, 0, 0, .6);
+    width: 500px;
+    align-items: center;
+}
+
+.home {
+    min-height: 100vh;
+    background: #14161a;
+    background: no-repeat cover;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: gold;
+}
+
+.title {
+    flex: 1;
+    color: gold;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.banner {
+    background-image: url('./asset/images/Cryptocurrency.webp');
+    height: 400px;
+    background-position: center;
+}
+
+.banner-carouse {
+    display: flex;
+    border: 1px solid gold;
+    height: 50%;
+    align-items: center;
+}

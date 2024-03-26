@@ -3,10 +3,11 @@ import { Route, Routes, useNavigate } from 'react-router-dom'
 import Login from './pages/authentication/Login'
 import Register from './pages/authentication/Register'
 import GoogleButton from 'react-google-button'
-import Avtar from './components/Avtar'
 import { useUserAuth } from './context/UserAuthContext'
+import { AbcLogo } from './components/Images'
 
 const Authentication = () => {
+
 
     const { loginWithGoogle, forgetPassword } = useUserAuth();
     const navigate = useNavigate();
@@ -33,21 +34,22 @@ const Authentication = () => {
     }
 
     return (
-        <div className='d-flex justify-content-center m-4'>
-            <div>
 
-                <Avtar />
+        <div className='d-flex justify-content-center authentication'>
+            <div className='align-self-center p-5 auth-form '>
+
+                <div>{AbcLogo}</div>
                 <Routes >
                     <Route path='/' element={<Login />} />
                     <Route path='/login' element={<Login />} />
                     <Route path='/register' element={<Register />} />
                 </Routes>
 
-                <div className='d-flex flex-column justify-content-center'>
-                    <GoogleButton onClick={handleGoogleLogin} className='mt-3' type='light' />
-                    <button onClick={forgetPasswordHandler} class="btn btn-link">Forget Password</button>
+                <div className='d-flex align-items-center flex-column mt-3 '>
+                    <GoogleButton onClick={handleGoogleLogin} type='light' />
+                    <button onClick={forgetPasswordHandler} class="btn btn-link ">Forget Password</button>
                 </div>
-
+                
             </div>
         </div>
     )
