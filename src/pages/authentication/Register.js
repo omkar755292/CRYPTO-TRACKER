@@ -52,7 +52,7 @@ const Register = () => {
                     value={password}
                     onChange={(e) => { setPassword(e.target.value) }} />
             </div>
-            <div className='form-btn' >
+            <div className='auth-form-btn' >
                 <button type="submit" class="btn btn-primary">Submit</button>&nbsp;
                 <Link to="/authentication/login" >login</Link>
             </div>

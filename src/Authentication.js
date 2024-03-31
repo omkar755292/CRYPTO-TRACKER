@@ -48,7 +48,7 @@ const Authentication = () => {
 
                 <div className='google-button'>
                     <GoogleButton onClick={handleGoogleLogin} type='light' />
-                    <button onClick={forgetPasswordHandler} class="btn btn-link">Forget Password</button>
+                    <button onClick={forgetPasswordHandler} class="btn-link">Forget Password</button>
                 </div>
                 
             </div>
