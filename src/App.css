@@ -9,6 +9,55 @@ rgb(52 58 64) */
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+.auth-page {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./asset/images/Cryptocurrency.webp');
+}
+
+.auth-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid white;
+    padding: 3rem 5rem;
+    position: relative;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.463);
+}
+
+.abc-badge{
+    position: relative;
+    bottom: 5px;
+    right: 150px;
+}
+.form-control{
+    width: 20rem;
+}
+.google-button {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.auth-form div{
+    margin-bottom: 5px;
+}
+
+.form-btn{
+    display: flex;
+    align-items: center;
+}
+.form-btn button, a{
+   padding: 5px 30px;
+   width: 50%;
+   text-align: center;
+}
 
 .authentication {
     height: 730px;
@@ -19,21 +68,12 @@ rgb(52 58 64) */
 
 }
 
-.auth-form {
-    border: 3px solid white;
-    background-color: rgba(0, 0, 0, .6);
-    width: 500px;
-    align-items: center;
-}
-
 .home {
     min-height: 100vh;
-    background: #14161a;
-    background: no-repeat cover;
-    color: white;
+    background-color: #14161a;
 }
 
-a {
+.auth-form a {
     text-decoration: none;
     color: gold;
 }
@@ -48,6 +88,7 @@ a {
 .banner {
     background-image: url('./asset/images/Cryptocurrency.webp');
     height: 400px;
+    display: flex;
     background-position: center;
 }
 
@@ -55,5 +96,9 @@ a {
     display: flex;
     border: 1px solid gold;
     height: 50%;
+}
+
+.carouse-item {
+    align-self: flex-end;
     align-items: center;
 }

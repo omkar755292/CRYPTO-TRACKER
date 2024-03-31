@@ -5,7 +5,6 @@ const CoinList = () => {
   return (
     <div>
       <Banner />
-      CoinList
     </div>
   )
 }

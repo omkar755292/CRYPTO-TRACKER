@@ -29,7 +29,7 @@ const Banner = () => {
     const items = trending.map((coin) => {
         return (
             <Link className='carouse-item' to={`/coins/${coin.id}`}>
-                <img src={coin?.image} alt={coin.name} height='80px' style={{ marginBottom: 10 }} />
+                <img src={coin?.image} alt={coin.name} height='80px' style={{ width: '80px', height:'80px' ,marginBottom: 10 }} />
             </Link>
         )
     });

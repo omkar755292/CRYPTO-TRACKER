@@ -21,11 +21,11 @@ const Header = () => {
   return (
 
     <ThemeProvider theme={darkTheam}>
-      <AppBar color='transparent' position='static' >
+      <AppBar >
         <Container>
           <Toolbar>
 
-            <Typography onClick={(e) => { navigate('/') }} className='title' >
+            <Typography onClick={(e) => { navigate('/') }}>
               {AbcLogo}
               CRYPTO.TRACKER
             </Typography>
@@ -33,7 +33,6 @@ const Header = () => {
             <Select
               variant='outlined'
               value={currency}
-              style={{ color: 'gold', width: '100px', height: '50px' }}
               onChange={(e) => { setCurrency(e.target.value) }}>
               <MenuItem value={'USD'}>USD</MenuItem>
               <MenuItem value={'INR'}>INR</MenuItem>

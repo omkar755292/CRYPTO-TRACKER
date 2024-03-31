@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Routes, useNavigate } from 'react-router-dom'
+import {  Route, Routes, useNavigate } from 'react-router-dom'
 import Login from './pages/authentication/Login'
 import Register from './pages/authentication/Register'
 import GoogleButton from 'react-google-button'
@@ -35,19 +35,20 @@ const Authentication = () => {
 
     return (
 
-        <div className='d-flex justify-content-center authentication'>
-            <div className='align-self-center p-5 auth-form '>
-
-                <div>{AbcLogo}</div>
+        <div className='auth-page'>
+            <div className='auth-container'>
+                <div className='abc-badge'>{AbcLogo}</div>
+                <div>
                 <Routes >
                     <Route path='/' element={<Login />} />
                     <Route path='/login' element={<Login />} />
                     <Route path='/register' element={<Register />} />
                 </Routes>
+                </div>
 
-                <div className='d-flex align-items-center flex-column mt-3 '>
+                <div className='google-button'>
                     <GoogleButton onClick={handleGoogleLogin} type='light' />
-                    <button onClick={forgetPasswordHandler} class="btn btn-link ">Forget Password</button>
+                    <button onClick={forgetPasswordHandler} class="btn btn-link">Forget Password</button>
                 </div>
                 
             </div>
