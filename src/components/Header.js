@@ -1,4 +1,3 @@
-import { AppBar, Container, MenuItem, Select, ThemeProvider, Toolbar, Typography, createTheme } from '@mui/material'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useCyptoContext } from '../context/CyoptoContext';
@@ -8,40 +7,29 @@ import { AbcLogo } from './Images';
 const Header = () => {
   const navigate = useNavigate();
   const { currency, setCurrency } = useCyptoContext();
-
-  const darkTheam = createTheme({
-    palette: {
-      primary: {
-        main: '#fff'
-      }
-    },
-    type: 'dark'
-  });
-
+  console.log(currency);
   return (
+    <div className='header'>
+      <div className='header-container'>
 
-    <ThemeProvider theme={darkTheam}>
-      <AppBar >
-        <Container>
-          <Toolbar>
+        <div className='header-title'
+          onClick={() => navigate('/home')}>
+          {AbcLogo}
+          <p> CRYPTO.TRACKER  </p>
+        </div>
 
-            <Typography onClick={(e) => { navigate('/') }}>
-              {AbcLogo}
-              CRYPTO.TRACKER
-            </Typography>
+        <div className='header-select'>
+          <select
+            value={currency}
+            onChange={(e) => setCurrency(e.target.value)}>
 
-            <Select
-              variant='outlined'
-              value={currency}
-              onChange={(e) => { setCurrency(e.target.value) }}>
-              <MenuItem value={'USD'}>USD</MenuItem>
-              <MenuItem value={'INR'}>INR</MenuItem>
-            </Select>
+            <option value={'USD'}>USD</option>
+            <option value={'INR'}>INR</option>
+          </select>
+        </div>
+      </div>
 
-          </Toolbar>
-        </Container>
-      </AppBar>
-    </ThemeProvider>
+    </div>
   )
 }
 

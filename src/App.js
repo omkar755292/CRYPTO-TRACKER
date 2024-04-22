@@ -1,21 +1,18 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import './App.css';
 import Home from './pages/Home';
-import Authentication from './Authentication';
-import UserAuthContextProvider from './context/UserAuthContext';
-import ProtectedRoute from './components/ProtectedRoute';
+import CyptoContextProvider from './context/CyoptoContext';
 
 function App() {
 
   return (
-    <div className='App' >
+    <div classNam='App' >
       <Router >
-        <UserAuthContextProvider>
+        <CyptoContextProvider>
           <Routes>
-            <Route path='/authentication/*' element={<Authentication />} />
-            <Route path='/*' element={<ProtectedRoute> <Home /> </ProtectedRoute>} />
+            <Route path='/*' element={<Home />} />
           </Routes>
-        </UserAuthContextProvider>
+        </CyptoContextProvider>
       </Router>
     </div>
   );

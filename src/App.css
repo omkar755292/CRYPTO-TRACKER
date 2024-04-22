@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -95,12 +94,31 @@ a {
     text-decoration: none;
     color: gold;
 }
-
-.title {
-    flex: 1;
+.header{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+}
+.header-container{
+    display: flex;
+    width: 70%;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-title {
+    display: flex;
+    align-items: center;
     color: gold;
-    font-weight: 700;
+    font-weight: 900;
     cursor: pointer;
+}
+.header-select option{
+    color: black;
+}
+.header-select select{
+    background-color: transparent;
+    color: gold;
+    padding: 10px;
 }
 
 .banner {
@@ -114,11 +132,9 @@ a {
 
 .banner-carouse {
     display: flex;
-    /* border: 2px solid gold; */
     align-items: center;
     height: 45%;
     background-color: rgba(0, 0, 0, 0.544);
-    /* rgba(52, 58, 64, 0.5); */
 }
 
 .carouse-item {

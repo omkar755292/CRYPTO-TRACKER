@@ -14,8 +14,8 @@ import { auth } from '../firebase';
 const UserAuthContext = createContext();
 
 const UserAuthContextProvider = (props) => {
-    const guest = { email: "guest", password: "", fullName:" guest" }
-    const [user, setUser] = useState(guest);
+
+    const [user, setUser] = useState();
 
     const register = async (email, password, fullName) => {
         try {
@@ -35,7 +35,6 @@ const UserAuthContextProvider = (props) => {
     const logout = async () => {
         try {
             const responce = await signOut(auth);
-            setUser(guest);
             return responce;
         } catch (error) {
             alert(error.message);
