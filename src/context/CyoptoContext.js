@@ -12,7 +12,7 @@ const CyptoContextProvider = ({ children }) => {
         if (currency === 'USD') setSymbol('$');
     }, [currency]);
 
-
+    
     const value = { currency, symbol, setCurrency }
 
     return (

@@ -14,7 +14,7 @@ deploy.sh
 
 # production
 /build
-/cypto.tracker
+/crypto-tracker
 
 # misc
 .env
