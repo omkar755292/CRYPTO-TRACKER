@@ -36,6 +36,7 @@ const Banner = () => {
             </Link>
         )
     });
+
     return (
         <div className='banner'>
             <Container className='banner-carouse'>
